@@ -1,0 +1,20 @@
+HRC Co-Registration - Installation Guide
+
+1. Install Python 2.7 64 bit (x64) from the website: https://www.python.org/downloads/
+2. Download OSGeo4W64 from http://trac.osgeo.org/osgeo4w/ (64 bit version)
+3. Select advanced installation
+4. Search using keywords "otb", "opencv", "gdal", "scipy", "numpy"
+
+Input
+- HRC folder: folder with the HRC images of the area of interest
+- CCD folder: folder with the CCD images of the area of interest
+An option to directly compute the NDVI index from the fixed images is also available.
+Please avoid to use spaces in folders.
+
+Output
+New images are created in the CCD folder named like "original_name_adj_surf.tif"
+
+Example
+From the command line:
+	python C:\..\hrc_coregistration_script.py C:\\Demo\\HRC_images C:\\Demo\\CCD_images --compute_ndvi (if you want to compute the NDVI)
+	python C:\..\hrc_coregistration_script.py C:\\Demo\\HRC_images C:\\Demo\\CCD_images (if you just want to fix the images)
